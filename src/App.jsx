@@ -41,7 +41,9 @@ const App = () => {
           showAddFriend ? "Close" : "Add Friend"
         }`}</Button>
       </div>
-      {showSplit && <FormSplitBill splitWith={splitWith} />}
+      <div className="holder">
+        {showSplit && <FormSplitBill splitWith={splitWith} />}
+      </div>
     </div>
   );
 };
