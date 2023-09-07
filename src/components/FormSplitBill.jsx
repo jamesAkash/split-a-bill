@@ -38,7 +38,13 @@ function FormSplitBill({ splitWith }) {
         onChange={(e) => handleChange(e)}
       />
       <label>{name}'s expense</label>
-      <input type="text" value={billState.friend} name="friend" disabled />
+      <input
+        style={{ color: "orangered", fontSize: "16px", fontWeight: "700" }}
+        type="text"
+        value={billState.friend}
+        name="friend"
+        disabled
+      />
       <label>Who is Paying?</label>
       <select
         name="payer"
