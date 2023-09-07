@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+:root {
+  --dark: #f97316;
+  --light: #ffedd5;
+  --neutral: #fb923c;
+  --dark-text: #b53410;
+  --white: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--light);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 3px 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-add {
+  background-color: #fff;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.btn-close {
+}
+
+.people-container {
+  width: 100%;
+  /* background-color: gray; */
+}
+
+.people-container ul {
+  list-style: none;
+}
+.people-container li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.people-avatar {
+  width: 40px;
+  border-radius: 20px;
+}
+.people-container .details h3 {
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 400;
+}
+
+.people-container .details h4 {
+  font-size: clamp(12px, 1.5vw, 18px);
+  color: var(--dark-text);
+}
+
+.addForm {
+  background-color: var(--neutral);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 100%;
+  padding: 20px;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  gap: 5px;
+}
+
+.form-control label {
+  font-size: clamp(12px, 1.5vw, 18px);
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 3px 10px;
+  /* outline: none; */
+  border: none;
+  height: 30px;
+  border-radius: 20px;
 }
